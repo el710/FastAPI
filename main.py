@@ -1,5 +1,3 @@
-
-
 from fastapi import Body, FastAPI, HTTPException, Path, Request
 from fastapi.responses import HTMLResponse
 ### html templates

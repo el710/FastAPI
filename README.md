@@ -16,6 +16,7 @@ How to run:
   
 
 
++ module_16 examples
 
 ---------------------------------------
 starlet - base of web-service
@@ -26,6 +27,5 @@ it automatically refresh API when code is edited
 
 start app with uvicorn server:  python -m uvicorn main:app !!!NOTE: must be in work directory to see main.py
 
-+ module_16
 HTML. https://uguide.ru/tablica-osnovnykh-tegov-html-s-primerami
 
