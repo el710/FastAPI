@@ -1,0 +1,48 @@
+<!-- Use main.html as template for work -->
+{% extends "main.html" %}
+
+{% block crud_container %}
+
+<section class="container-fluid">
+    <form method="post" action="/">
+        <div class="col-auto">
+            <div class="input-group mb-3">
+                <input type="text" name="message" value="{{text}}" class="from-control" 
+                        placeholder="Add new message" aria-label="Add message" aria-describedby="button-addon2">
+                <button class="button-outline-primary" type="submit" id="button-addon2" data-mdb-ripple-color="dark">
+                    ADD
+                </button>
+            </div>
+        </div>
+    </form>
+</section>
+
+
+{% if message %}
+    <article class="card container fluid">
+        <br>
+        <h2> ID: {{message.id}} </h2>
+        <p>
+            <strong>Text: {{message.text}}</strong> 
+        </p>
+
+    </article>
+{% else %}
+    <section class="container-fluid">
+        <h2 align="center">Messages</h2>
+        <br>
+        <div class="card">
+            <ul class="List-group list-group-flush">
+                {% for message in base_messages %}
+                <li class="List-group-item">
+                    {{message.id}} <a href="/message/{{message.id}}"> {{message.text}} </a>
+                </li>
+                {% endfor %}
+            </ul>
+
+        </div>
+    </section>
+{% endif %}
+
+
+{% endblock %}
